@@ -74,3 +74,33 @@ p {
 .btn--primary:hover {
   background: linear-gradient(to right, hsl(136, 65%, 75%), hsl(192, 70%, 75%));
 }
+
+/* Articles */
+.article {
+  box-shadow: 0 0 25px 5px hsl(0, 0%, 98%);
+  max-width: 55rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.article__heading {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.article__heading:hover {
+  color: hsl(136, 65%, 55%);
+}
+
+.article__body {
+  padding: 3rem;
+}
+
+.article__image {
+  width: 100%;
+}
+
+.article__writer {
+  font-size: 1.4rem;
+}
