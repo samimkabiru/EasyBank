@@ -64,6 +64,7 @@ p {
   padding: 1rem 3rem;
   text-align: center;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 
 .btn--primary {
@@ -103,6 +104,11 @@ p {
 
 .article__writer {
   font-size: 1.4rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
 }
 
 /* Icons */
