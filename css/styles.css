@@ -131,3 +131,27 @@ a {
   border-radius: 100%;
   background: linear-gradient(135deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60rem;
+  margin: 0 auto 2.5rem;
+}
+
+.features__body {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .features {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .features__body {
+    text-align: start;
+  }
+}
