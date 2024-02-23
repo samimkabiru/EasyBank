@@ -109,6 +109,7 @@ p {
 /* Links */
 a {
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 /* Icons */
@@ -154,4 +155,23 @@ a {
   .features__body {
     text-align: start;
   }
+}
+
+/* Blocks */
+.block {
+  padding: 5rem 2.5rem;
+}
+
+.block--dark {
+  background: hsl(233, 26%, 24%);
+}
+
+.block h1,
+.block h2 {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
