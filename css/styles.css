@@ -191,6 +191,7 @@ a {
   flex-wrap: wrap;
   padding-top: 0;
   padding-bottom: 0;
+  background: #fff;
 }
 
 .nav__header {
@@ -199,21 +200,26 @@ a {
   align-items: center;
   width: 100%;
   height: 6rem;
+  background: #fff;
+  z-index: 1;
+  padding: 0 2.5rem;
 }
 
 /* TODO: make the two icons stay on top of eachother. */
 .nav__list {
   border-radius: 0.7rem;
-  box-shadow: 0 0 3rem 1rem hsl(220, 16%, 96%);
+  box-shadow: 4rem 4rem 4rem 20rem hsla(233 26% 24% / 0.5);
   margin: 0;
-  margin-top: 2rem;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   padding: 0;
   text-align: center;
-  transition: all 0.3s;
+  transition: max-height 0.3s, opacity 0.3s, margin 0.3s;
   width: 100%;
+  background: #fff;
+  transform: translateZ(1px);
+  perspective: 10px;
 }
 
 .nav__logo {
@@ -249,6 +255,7 @@ a {
 .nav--expanded .nav__list {
   max-height: 100%;
   opacity: 1;
+  margin: 2.5rem 2.5rem 0;
 }
 
 .nav--expanded .nav__icon:nth-of-type(1) {
@@ -268,7 +275,12 @@ a {
 @media screen and (min-width: 1024px) {
   .nav {
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    background: #fff;
+    perspective: 10px;
+    transform: translateZ(-1px);
+    overflow: hidden;
+    height: 6rem;
   }
 
   .nav__header {
@@ -282,19 +294,27 @@ a {
   }
 
   .nav__list {
-    max-height: 10rem;
+    height: auto;
+    max-height: 100%;
     opacity: 1;
     width: auto;
     box-shadow: none;
     border-radius: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav--expanded .nav__list {
     margin: 0;
   }
 
   .nav__item {
     display: inline-block;
     margin: 0 2rem 0 0;
-    padding: 2rem 0;
+    padding: 1rem 0;
     transition: border-bottom 0.1s;
+    overflow: hidden;
   }
 
   .nav__item:hover {
@@ -307,5 +327,63 @@ a {
 
   .nav__button {
     display: inline-block;
+  }
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  align-items: end;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 65%;
+    align-items: center;
+    justify-items: start;
+  }
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  background: hsl(0, 0%, 98%);
+  overflow-x: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 70rem;
+  background: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.hero__content {
+  align-self: self-start;
+  order: 1;
+}
+
+.hero__text {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__image {
+    width: auto;
+    justify-self: start;
+    align-self: center;
+    background: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x: -4rem;
+    order: 2;
+  }
+
+  .hero__content {
+    align-self: center;
+    text-align: left;
   }
 }
