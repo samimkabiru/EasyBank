@@ -413,7 +413,6 @@ a {
 .block-features__header {
   text-align: center;
   margin: 0 auto 3.5rem;
-  max-width: 70rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -434,7 +433,6 @@ a {
 
   .block-features__header {
     text-align: left;
-    max-width: 114rem;
   }
 
   .block-features__text {
