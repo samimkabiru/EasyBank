@@ -217,7 +217,6 @@ a {
   padding: 0 2.5rem;
 }
 
-/* TODO: make the two icons stay on top of eachother. */
 .nav__list {
   border-radius: 0.7rem;
   box-shadow: 4rem 4rem 4rem 20rem hsla(233 26% 24% / 0.5);
@@ -250,6 +249,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .nav__icon:nth-of-type(1) {
@@ -262,6 +264,7 @@ a {
   max-width: 0;
   max-height: 0;
   transition: all 0.3s;
+  position: absolute;
 }
 
 .nav--expanded .nav__list {
