@@ -335,6 +335,8 @@ a {
 
   .nav__item a {
     color: hsl(233, 8%, 62%);
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 
   .nav__button {
@@ -388,7 +390,7 @@ a {
   .hero {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
   }
 
   .hero__image > img {
