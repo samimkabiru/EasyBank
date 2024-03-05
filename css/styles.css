@@ -371,6 +371,10 @@ a {
   padding-right: 0;
 }
 
+.overflow-section {
+  overflow-x: hidden;
+}
+
 .hero__image > img {
   width: 100%;
   background: url(/images/bg-intro-mobile.svg);
