@@ -431,6 +431,8 @@ a {
 /* Features block */
 .block-features {
   background: hsl(0, 0%, 97%);
+  padding-top: 9rem;
+  padding-bottom: 9rem;
 }
 
 .block-features__sections {
@@ -439,7 +441,7 @@ a {
 
 .block-features__header {
   text-align: center;
-  margin: 0 auto 3.5rem;
+  margin: 0 auto 6rem;
 }
 
 @media screen and (min-width: 1024px) {
